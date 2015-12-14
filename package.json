@@ -1,11 +1,14 @@
 {
   "name": "astros-resource-refer",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "_version": "0.0.3",
   "description": "Astro的插件。处理JS和CSS中的图片、字体引用。",
   "main": "astro-resource-refer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": "lemonabc/astros-resource-refer",
+  "email" : "ilemonabc@qq.com",
+  "author": "lemonabc <ilemonabc@qq.com>",
   "license": "ISC"
 }

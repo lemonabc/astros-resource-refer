@@ -1,7 +1,6 @@
 {
   "name": "astros-resource-refer",
-  "version": "0.0.3",
-  "_version": "0.0.3",
+  "version": "1.0.0",
   "description": "Astro的插件。处理JS和CSS中的图片、字体引用。",
   "main": "astro-resource-refer.js",
   "scripts": {

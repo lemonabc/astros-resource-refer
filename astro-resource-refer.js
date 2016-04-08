@@ -45,9 +45,10 @@ module.exports = new astro.Middleware({
             let rule = prjCfg.jsImgRefer || {};
                 rule = rule.rule;
             if(!rule){
-                console.warn('astro-resource-refer:','项目未配置 jsImgRefer.rule 字段');
-                next(asset);
-                return;
+                rule = '$res(.__path__.)';
+                // console.warn('astro-resource-refer:','项目未配置 jsImgRefer.rule 字段');
+                // next(asset);
+                // return;
             }
             prjCfg._JIRAdorn = rule.split('__path__');
             rule = rule.

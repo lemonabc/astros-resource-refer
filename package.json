@@ -1,6 +1,6 @@
 {
   "name": "astros-resource-refer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "扩展JS及CSS中的资源引用",
   "main": "astro-resource-refer.js",
   "scripts": {

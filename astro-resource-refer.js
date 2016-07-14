@@ -5,7 +5,7 @@ require('astros');
  * 读取文件时，替换JS和CSS中的图片引用
  */
 module.exports = new astro.Middleware({
-    fileType: ['js', 'css']
+    fileType: ['js', 'css', 'html']
 }, function(asset, next) {
     let data = asset.data
     if (!data) {
@@ -33,7 +33,7 @@ module.exports = new astro.Middleware({
             return util.format('"%s%s"', imgPrefix, imgpath);
         });
     }
-    if (asset.fileType == 'js') {
+    // if (asset.fileType == 'js') {
         if (!prjCfg._JIRExp) {
             let rule = prjCfg.jsImgRefer ? prjCfg.jsImgRefer.rule : (this.config.jsImgRefer);
             if (!rule) {
@@ -56,6 +56,7 @@ module.exports = new astro.Middleware({
         }else{
             urlPerfix = this.config.jsImgPath || imgPrefix;
         }
+        
         data = data.replace(prjCfg._JIRExp, function(str, imgpath) {
             if (imgpath.charAt(0) == '~') {
                 return util.format('"%s%s"',urlPerfix, imgpath.substr(1))
@@ -67,7 +68,7 @@ module.exports = new astro.Middleware({
             }
             return;
         });
-    }
+    // }
     asset.data = data;
     next(asset);
 });
